@@ -1,0 +1,35 @@
+name: PCRemote
+
+options:
+  bundleIdPrefix: it.pcremote
+  deploymentTarget:
+    iOS: "16.0"
+
+settings:
+  base:
+    SWIFT_VERSION: "5.0"
+    MARKETING_VERSION: "1.0"
+    CURRENT_PROJECT_VERSION: "1"
+
+targets:
+  PCRemote:
+    type: application
+    platform: iOS
+    sources:
+      - path: PCRemote
+    info:
+      path: Info.plist
+      properties:
+        CFBundleDisplayName: PC Remote
+        UILaunchScreen: {}
+        UISupportedInterfaceOrientations:
+          - UIInterfaceOrientationPortrait
+          - UIInterfaceOrientationLandscapeLeft
+          - UIInterfaceOrientationLandscapeRight
+        NSLocalNetworkUsageDescription: Serve per collegarsi al tuo PC.
+        NSAppTransportSecurity:
+          NSAllowsLocalNetworking: true
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: it.pcremote.app
+        TARGETED_DEVICE_FAMILY: "1"
